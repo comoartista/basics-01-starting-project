@@ -50,23 +50,24 @@ function calculateResult(calculationType) {
     writeToLog(calculationType, initialResult, enteredNumber, currentResult);
 }
 
-function add() {
-    calculateResult('ADD')
-}
+// function add() {
+//     calculateResult('ADD')
+// }
 
-function subtract() {
-    calculateResult('SUBSTRACT')
-}
+// function subtract() {
+//     calculateResult('SUBSTRACT')
+// }
 
-function multiply() {
-    calculateResult('MULTIPLY');   
-}
+// function multiply() {
+//     calculateResult('MULTIPLY');   
+// }
 
-function divided() {
-    calculateResult('DIVIDE');
-}
+// function divided() {
+//     calculateResult('DIVIDE');
+// }
 
-addBtn.addEventListener(('click'), add);
-subtractBtn.addEventListener(('click'), subtract);
-multiplyBtn.addEventListener(('click'), multiply);
-divideBtn.addEventListener(('click'), divided);
+
+addBtn.addEventListener(('click'), calculateResult.bind(this, 'ADD'));
+subtractBtn.addEventListener(('click'), calculateResult.bind(this, 'SUBSTRACT'));
+multiplyBtn.addEventListener(('click'), calculateResult.bind(this, 'MULTIPLY'));
+divideBtn.addEventListener(('click'), calculateResult.bind(this, 'DIVIDE'));
